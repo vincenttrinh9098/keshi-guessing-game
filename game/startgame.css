@@ -1,25 +1,57 @@
-html,
-body {
+/* Desktop: flex centering */
+html, body {
     height: 100%;
     margin: 0;
-    overflow-y: hidden;
-}
-
-body {
-    /*background-image: url("../images/keshi_wall.png");*/
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: rgb(82, 117, 82);
+    padding: 0;
+    background-color: #d0f0fd;
     display: flex;
     justify-content: center;
-    /* horizontal center */
-    align-items: flex-start;   /* push content to top */
-     padding-top: 25rem; 
-    /* vertical center */
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Image container */
+#middle-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+#middle-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+#middle-image img:hover {
+    transform: scale(1.03);
 }
 
 
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+    html, body {
+        display: block;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    #middle-image {
+        margin-top: 20px;
+        padding: 10px;
+        justify-content: center;
+        align-items: flex-start; /* ← fixes vertical centering on mobile */
+    }
+
+    #middle-image img {
+        max-width: 90%;
+    }
+}
 
 /* Optional: stack items nicely */
 .container {
@@ -31,17 +63,6 @@ body {
     /* center items inside container */
 }
 
-#middle-image {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;   /* push to top */
-
-}
-
-#middle-image img {
-    max-width: 80%;
-    height: auto;
-}
 
 .middle-submission {
     padding-top: 7rem;

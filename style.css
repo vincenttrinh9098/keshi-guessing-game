@@ -3,7 +3,7 @@ html, body {
     margin: 0;              /* remove default margin */
 }
 body {
-    background-image: url("keshi.png");
+    background-image: url("images/keshi.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -17,7 +17,7 @@ body {
     top: 50%;          /* halfway down the page */
     left: 50%;         /* halfway across the page */
     transform: translate(-50%, -50%);  /* move it back by half its size */
-    padding: 2rem 6rem;
+    padding: .7rem 6rem;
     border-radius: 100px;
     font-family:"Papyrus" , fantasy;
     cursor:pointer;
