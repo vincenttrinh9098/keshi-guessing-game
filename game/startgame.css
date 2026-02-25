@@ -1,0 +1,107 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+body {
+    /*background-image: url("../images/keshi_wall.png");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(82, 117, 82);
+    display: flex;
+    justify-content: center;
+    /* horizontal center */
+    align-items: flex-start;   /* push content to top */
+     padding-top: 25rem; 
+    /* vertical center */
+}
+
+
+
+/* Optional: stack items nicely */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* space between elements */
+    align-items: center;
+    /* center items inside container */
+}
+
+#middle-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;   /* push to top */
+
+}
+
+#middle-image img {
+    max-width: 80%;
+    height: auto;
+}
+
+.middle-submission {
+    padding-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Style BOTH buttons the same way */
+#playBtn,
+#newSongBtn {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(145deg, #1db954, #169c46);
+    color: white;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: all 0.2s ease;
+}
+
+/* Hover effect */
+#playBtn:hover,
+#newSongBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* Click effect */
+#playBtn:active,
+#newSongBtn:active {
+    transform: scale(0.95);
+}
+#userInput {
+    height: 55px;
+    width: 250px;
+    font-size: 18px;
+    padding: 0 15px;
+
+    border-radius: 30px;
+    border: none;
+    outline: none;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+#result {
+    display: block;
+    margin-top: 25px;
+
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    min-height: 30px; /* prevents layout shift */
+
+    transition: all 0.3s ease;
+}
