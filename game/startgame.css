@@ -12,6 +12,7 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    zoom:none;
 }
 
 /* Image container */
@@ -41,7 +42,7 @@ html, body {
 .container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     /* space between elements */
     align-items: center;
     /* center items inside container */
@@ -53,7 +54,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
 }
 
 /* Style BOTH buttons the same way */
@@ -87,7 +88,7 @@ html, body {
 }
 #userInput {
     height: 55px;
-    width: 250px;
+    width: 450px;
     font-size: 18px;
     padding: 0 15px;
 
@@ -149,7 +150,7 @@ html, body {
 
     .middle-submission {
         padding-top: 0.5rem;   /* small spacing above buttons */
-        gap: 8px;              /* space between buttons and input */
+        gap: 50px;              /* space between buttons and input */
         display: flex;
         justify-content: center;
         align-items: center;   /* vertically align buttons & input */

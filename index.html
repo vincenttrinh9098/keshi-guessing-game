@@ -2,16 +2,27 @@
 <html lang = "en">
 <head>
     <meta charset = "UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Keshi!</title>
     <link rel = "stylesheet" href = "style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-    <audio autoplay>
-        <source src="/songs/2hellANDback.mp3" type="audio/mp3">
-        theme song headassss
-    </audio>
-
+        <header>
+        <nav class="nav-bar">
+            <span>Keshi Song Game Guesser</span>
+            <!-- Hidden audio -->
+            <audio id="bg-music" autoplay loop>
+                <source src="songs/2hellANDback.mp3" type="audio/mpeg">
+            </audio>
+            <!-- Button users click -->
+            <button id="audio-btn">♫</button>
+        </nav>
+        </header>
     <a href="game/startgame.html" class="startbutton">Start</a>
+    <script src = "script.js"></script>
 
 </body>
 

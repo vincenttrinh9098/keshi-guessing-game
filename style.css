@@ -7,6 +7,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    font-family: 'Raleway', sans-serif;
 }
 
 .startbutton{
@@ -17,13 +18,59 @@ body {
     top: 50%;          /* halfway down the page */
     left: 50%;         /* halfway across the page */
     transform: translate(-50%, -50%);  /* move it back by half its size */
-    padding: .7rem 6rem;
+    padding: .7rem 2rem;
     border-radius: 100px;
-    font-family:"Papyrus" , fantasy;
     cursor:pointer;
-    font-size:7rem;
+    font-size:4rem;
 }
 
 .startbutton:hover{
    background-color:rgb(40, 98, 49);
+}
+
+.nav-bar{
+    padding: 20px;
+    background-color: rgb(62, 142, 70);
+    color:white;
+    align-items: center;
+    display:flex;
+    justify-content: space-between;  /* push ends apart */
+    gap:10px;
+    font-family: 'Poppins', sans-serif;
+    font-size:3rem;
+    font-style:bold;
+}
+#audio-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .nav-bar{
+     padding: 15px;
+     font-size:1.3rem;
+     gap:100px;
+    }
+
+    .startbutton{
+        display:inline-block;
+        background-color:rgb(49, 122, 61);
+        color:white;
+        position: absolute;
+        top: 50%;          /* halfway down the page */
+        left: 50%;         /* halfway across the page */
+        transform: translate(-50%, -50%);  /* move it back by half its size */
+        padding: .7rem 2rem;
+        border-radius: 100px;
+
+        cursor:pointer;
+        font-size:2.5rem;
+    }
+
+
 }

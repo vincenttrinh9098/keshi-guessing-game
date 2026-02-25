@@ -1,14 +1,7 @@
 const songs = [
-{file: "../songs/2hellANDback.mp3", answer:"2 hell and back"},
-{file: "../songs/2soon.mp3", answer:"2 soon"}
-/*
-{file: "songs/2soon.mp3", answer:"2 soon"},
-{file: "songs/2soon.mp3", answer:"2 soon"},
-{file: "songs/2soon.mp3", answer:"2 soon"},
-{file: "songs/2soon.mp3", answer:"2 soon"},
-{file: "songs/2soon.mp3", answer:"2 soon"},
-*/
-];
+{file: "https://hvgcbsycxjreanddnmaf.supabase.co/storage/v1/object/public/Keshi%20songs/2%20HELL%20&%20BACK.mp3", answer:"2 hell and back"},
+{file: "https://hvgcbsycxjreanddnmaf.supabase.co/storage/v1/object/public/Keshi%20songs/2%20soon%20-%20keshi%20-%20Spotimate.app.mp3", answer:"2 soon"},
+{file: "https://hvgcbsycxjreanddnmaf.supabase.co/storage/v1/object/public/Keshi%20songs/Say%20-%20keshi%20-%20Spotimate.app.mp3",answer: "say"}];
 
 const submitBtn = document.getElementById("submit-btn");
 const userInput = document.getElementById("userInput");
@@ -29,6 +22,7 @@ loadNewSong();
 
 newSongBtn.addEventListener("click", () => {
     loadNewSong();
+    playSong();
     result.textContent = "";
     userInput.value = "";
     canPlay = true;
@@ -37,7 +31,9 @@ newSongBtn.addEventListener("click", () => {
 
 let snippetStart = 0; // stores the current snippet start
 
-playBtn.addEventListener("click", () => {
+playBtn.addEventListener("click", playSong);
+
+function playSong(){
     if (!currentSong) return;
 
     audio.addEventListener('loadedmetadata', () => {
@@ -51,7 +47,7 @@ playBtn.addEventListener("click", () => {
     }, { once: true });
 
     audio.src = currentSong.file;
-});
+};
 
 snippetBtn.addEventListener("click", () => {
     if (!currentSong) return;
