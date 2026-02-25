@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;           /* ensures full viewport height */
+    margin: 0;              /* remove default margin */
+}
+body {
+    background-image: url("keshi.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#startbutton{
+    background-color:rgb(49, 122, 61);
+    color:white;
+    position: absolute;
+    top: 50%;          /* halfway down the page */
+    left: 50%;         /* halfway across the page */
+    transform: translate(-50%, -50%);  /* move it back by half its size */
+    padding: 3rem 6rem;
+    border-radius: 100px;
+    font-family:"Papyrus" , fantasy;
+    cursor:pointer;
+    font-size:7rem;
+}
