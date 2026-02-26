@@ -2,7 +2,6 @@ const songs = [
 {file: "https://hvgcbsycxjreanddnmaf.supabase.co/storage/v1/object/public/Keshi%20songs/2%20HELL%20&%20BACK.mp3", answer:"2 hell and back"},
 {file: "https://hvgcbsycxjreanddnmaf.supabase.co/storage/v1/object/public/Keshi%20songs/2%20soon%20-%20keshi%20-%20Spotimate.app.mp3", answer:"2 soon"},
 {file: "https://hvgcbsycxjreanddnmaf.supabase.co/storage/v1/object/public/Keshi%20songs/Say%20-%20keshi%20-%20Spotimate.app.mp3",answer: "say"},
-
 {file:"https://hvgcbsycxjreanddnmaf.supabase.co/storage/v1/object/public/Keshi%20songs/ANGEL%20-%20keshi%20-%20Spotimate.app.mp3", answer:"angel"},
 {file:"https://hvgcbsycxjreanddnmaf.supabase.co/storage/v1/object/public/Keshi%20songs/ANGOSTURA%20-%20keshi%20-%20Spotimate.app.mp3", answer:"angostura"},
 {file:"https://hvgcbsycxjreanddnmaf.supabase.co/storage/v1/object/public/Keshi%20songs/B.Y.S.%20-%20keshi%20-%20Spotimate.app.mp3", answer:"bys"},
@@ -107,8 +106,10 @@ function checkGuess(){
             userInput.value.trim().toLowerCase() === currentSong.answer.toLowerCase()
         ) {
             result.textContent = "You did it!";
+            result.style.color = "green";
         } else {
-            result.textContent = "Try Again";
+            result.textContent = "Try Again ❌";
+            result.style.color = "red";
         }
 
     userInput.value = "";
